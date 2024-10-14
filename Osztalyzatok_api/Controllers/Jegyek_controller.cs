@@ -84,5 +84,39 @@ namespace Osztalyzatok_api.Controllers
             return CreatedAtAction("Get", new { id = count + 1 }, jegyek);
         }
 
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Jegyek>> Put(int id, [FromBody] Jegyek jegyek)
+        {
+            if (jegyek == null)
+            {
+                return BadRequest("Nem lehet nulla");
+            }
+
+            await _connection.Connection.OpenAsync();
+
+
+
+
+            string updateQuery = "UPDATE Osztalyzatok SET Jegy = @Jegy, Leiras = @Leiras, Letrehozas = @Letrehozas WHERE Azon = @Azon";
+            using (var updateCommand = new MySqlCommand(updateQuery, _connection.Connection))
+            {
+                updateCommand.Parameters.AddWithValue("@Azon", id);
+                updateCommand.Parameters.AddWithValue("Jegy", jegyek.Jegy);
+                updateCommand.Parameters.AddWithValue("@Leiras",jegyek.Leiras );
+                updateCommand.Parameters.AddWithValue("@Letrehozas", DateTime.Now);
+
+                await updateCommand.ExecuteNonQueryAsync();
+            }
+
+            await _connection.Connection.CloseAsync();
+
+            return NoContent();
+
+        }
+
+
+        
+
+
     }
 }
