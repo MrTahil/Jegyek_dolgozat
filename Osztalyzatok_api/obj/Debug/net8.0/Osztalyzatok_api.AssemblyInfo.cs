@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Osztalyzatok_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bbb99e68cb6f36f578df252a0deaa0188a82261")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb4ad9f915bd0556cd073c2bf85c1164bfa79af7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Osztalyzatok_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Osztalyzatok_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

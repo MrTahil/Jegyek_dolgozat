@@ -113,9 +113,25 @@ namespace Osztalyzatok_api.Controllers
             return NoContent();
 
         }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            await _connection.Connection.OpenAsync();
+
+            string deleteQuery = "DELETE FROM Osztalyzatok WHERE Azon = @Azon";
+            using (var deleteCommand = new MySqlCommand(deleteQuery, _connection.Connection))
+            {
+                deleteCommand.Parameters.AddWithValue("@Azon", id);
+                await deleteCommand.ExecuteNonQueryAsync();
+            }
+
+            await _connection.Connection.CloseAsync();
+
+            return NoContent();
+        }
 
 
-        
+
 
 
     }
