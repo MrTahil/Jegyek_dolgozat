@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Osztalyzatok_api.props" />
+</Project>

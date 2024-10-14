@@ -52,5 +52,37 @@ namespace Osztalyzatok_api.Controllers
 
             return Ok(jegyek);
         }
+
+
+        [HttpPost]
+        public async Task<ActionResult<Jegyek>> Post([FromBody] Jegyek jegyek)
+        {
+            if (jegyek == null)
+            {
+                return BadRequest("Nem lehet nulla");
+            }
+
+            await _connection.Connection.OpenAsync();
+
+            string query = "INSERT INTO Osztalyzatok (Azon, Jegy, leiras, Letrehozas) VALUES (@Azon, @Jegy, @Leiras, @Letrehozas)";
+            var command5 = new MySqlCommand("SELECT COUNT(*) FROM Osztalyzatok", _connection.Connection);
+            count = Convert.ToInt32(await command5.ExecuteScalarAsync());
+            using (var command = new MySqlCommand(query, _connection.Connection))
+            {
+                command.Parameters.AddWithValue("@Azon", count + 1);
+                command.Parameters.AddWithValue("@Jegy", jegyek.Jegy);
+                command.Parameters.AddWithValue("@Leiras", jegyek.Leiras);
+                command.Parameters.AddWithValue("@Letrehozas", DateTime.Now);
+
+
+                await command.ExecuteNonQueryAsync();
+            }
+
+            await _connection.Connection.CloseAsync();
+
+
+            return CreatedAtAction("Get", new { id = count + 1 }, jegyek);
+        }
+
     }
 }
