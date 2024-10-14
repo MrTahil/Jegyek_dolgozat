@@ -1,0 +1,8 @@
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.csproj.AssemblyReference.cache
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.AssemblyInfoInputs.cache
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.AssemblyInfo.cs
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.csproj.CoreCompileInputs.cache
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tanulo\Desktop\Tahil\Osztalyzatok_api\Osztalyzatok_api\obj\Debug\net8.0\Osztalyzatok_api.sourcelink.json

@@ -1,4 +1,5 @@
-﻿namespace Osztalyzatok_api.Model
+﻿using System.Collections.Generic;
+namespace Osztalyzatok_api.Model
 {
     public class Jegyek
     {
